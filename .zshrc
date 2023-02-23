@@ -19,7 +19,7 @@ source "$(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme"
 source "$(brew --prefix asdf)/libexec/asdf.sh"
 
 # Command aliases
-[[ ! -f ~/.zaliases ]] || source ~/.zaliases
+[[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
 
 # Add VS Code CLI to path
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
