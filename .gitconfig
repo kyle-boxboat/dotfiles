@@ -2,11 +2,13 @@
   name = Kyle Colantonio
   email = Kyle.Colantonio@ibm.com
   username = kyle-boxboat
-  signkey = D32D8D63E99D5E830D22F54368D2F2DEC4C92964
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINwaVbBqc6ZyvIm7/BhRLnFVbWb4i4r9pgZqAUJoJaIL
 [core]
   editor = code --wait
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = ~/.gitignore
+[protocol]
+  version = 2
 [color]
   ui = true
 [color "branch"]
@@ -29,12 +31,14 @@
   prompt = false
 [difftool "default-code"]
   cmd = code --wait --diff $LOCAL $REMOTE
-[gpg]
-  program = gpg2
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
   gpgsign = true
