@@ -32,3 +32,14 @@ fi
 # Use 1Password for SSH keys and other API tokens
 export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 source ~/.config/op/plugins.sh
+
+# Initialize ZSH completion
+autoload -Uz compinit && compinit
+
+# Enable ZSH history
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
